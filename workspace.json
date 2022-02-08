@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "nx-trcp-type-bug": "apps/nx-trcp-type-bug",
-    "nx-trcp-type-bug-e2e": "apps/nx-trcp-type-bug-e2e"
+    "nx-trcp-type-bug-e2e": "apps/nx-trcp-type-bug-e2e",
+    "trcp": "libs/trcp"
   }
 }

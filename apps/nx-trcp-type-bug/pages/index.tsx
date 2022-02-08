@@ -1,6 +1,8 @@
 import styles from './index.module.css';
+import { client } from '@error/trcp/client';
 
 export function Index() {
+  const hello = client.useQuery(['hello', { textInput: 'sdsd' }]);
   /*
    * Replace the elements below with your own.
    *

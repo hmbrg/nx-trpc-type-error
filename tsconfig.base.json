@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@error/trcp/client": ["libs/trcp/src/client/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
