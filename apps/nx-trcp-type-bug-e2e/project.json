@@ -1,0 +1,28 @@
+{
+  "root": "apps/nx-trcp-type-bug-e2e",
+  "sourceRoot": "apps/nx-trcp-type-bug-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nx-trcp-type-bug-e2e/cypress.json",
+        "devServerTarget": "nx-trcp-type-bug:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nx-trcp-type-bug:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-trcp-type-bug-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nx-trcp-type-bug"]
+}

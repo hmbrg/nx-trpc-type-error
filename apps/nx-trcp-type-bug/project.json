@@ -1,0 +1,54 @@
+{
+  "root": "apps/nx-trcp-type-bug",
+  "sourceRoot": "apps/nx-trcp-type-bug",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/nx-trcp-type-bug",
+        "outputPath": "dist/apps/nx-trcp-type-bug"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "nx-trcp-type-bug:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "nx-trcp-type-bug:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "nx-trcp-type-bug:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/nx-trcp-type-bug"],
+      "options": {
+        "jestConfig": "apps/nx-trcp-type-bug/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-trcp-type-bug/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
